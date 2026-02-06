@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroThreat Scanner – File Security Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="bg-grid"></div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-shield-virus"></i>
+            ZeroThreat Scanner
+        </div>
+        <div class="status">Client-Side • No Uploads • Privacy Protected</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>ZeroThreat Scanner</h1>
+            <p class="tagline">Advanced local file threat detection – zero data leaves your device</p>
+
+            <div id="dropZone" class="upload-box">
+                <div class="upload-inner">
+                    <i class="fas fa-file-upload fa-4x"></i>
+                    <h2>Drop files here or click to browse</h2>
+                    <p>Supports documents, executables, archives, images, scripts...</p>
+                    <input type="file" id="fileInput" multiple hidden>
+                </div>
+            </div>
+
+            <div id="scanningArea" class="scan-progress hidden">
+                <h3>Scanning in progress...</h3>
+                <div class="progress-container">
+                    <div id="progressFill" class="progress-bar-fill"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="progressText">0%</span>
+                    <span id="currentFile">Initializing analysis engine...</span>
+                </div>
+            </div>
+
+            <div class="quick-stats">
+                <div class="stat safe">
+                    <span id="safeCount">0</span>
+                    <div>Safe</div>
+                </div>
+                <div class="stat suspicious">
+                    <span id="warningCount">0</span>
+                    <div>Suspicious</div>
+                </div>
+                <div class="stat danger">
+                    <span id="threatCount">0</span>
+                    <div>Danger</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="results hidden">
+            <h2>Analysis Report</h2>
+            <div id="resultsList" class="results-grid"></div>
+        </section>
+
+        <section class="legend">
+            <h3>Threat Levels</h3>
+            <div class="level-grid">
+                <div class="level-item safe">Safe <small>0–9</small></div>
+                <div class="level-item low">Low <small>10–24</small></div>
+                <div class="level-item medium">Medium <small>25–49</small></div>
+                <div class="level-item high">High <small>50–79</small></div>
+                <div class="level-item critical">Critical <small>80+</small></div>
+            </div>
+            <p class="disclaimer">This tool uses heuristic analysis only — not a full antivirus replacement.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>ZeroThreat Scanner • Local File Security • 2025–2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

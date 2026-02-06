@@ -10,7 +10,7 @@ It performs basic heuristic checks such as:
 
 Built with **HTML, CSS, and pure JavaScript** — no external frameworks or backend required.
 
-https://github.com/YOUR-USERNAME/zerothreat-scanner
+(https://github.com/Kavindi52/ZeroThreat-Scanner.git)
 
 ## ✨ Features
 
@@ -27,8 +27,7 @@ https://github.com/YOUR-USERNAME/zerothreat-scanner
 ## 🚀 Demo
 
 You can try it live here:  
-🔗 
-
+🔗 https://github.com/Kavindi52/ZeroThreat-Scanner.git
 
 
 ## 🛠️ Tech Stack
@@ -40,28 +39,53 @@ You can try it live here:
 - Font Awesome icons
 - Local browser only – zero dependencies to install
 
-## ⚡ Quick Start
+Project Structure
 
-### Option 1: Open directly
+zerothreat-scanner/
+├── index.html          # Main page & UI
+├── style.css           # All styling
+├── script.js           # Scanning logic & file analysis
+├── README.md
 
-1. Download or clone the repository
-2. Double-click `index.html`  
-   → opens in your default browser
+🔍 How It Works (in short)
 
-### Option 2: Run with local server (recommended)
+User drops or selects files
+File header (magic bytes) is read → checks if extension matches real file type
+For small files (< 2 MB): content is scanned for suspicious patterns
+Threat score is calculated
+Results are shown with color-coded threat levels
 
-```bash
-# Clone the repo
-git clone https://github.com/YOUR-USERNAME/zerothreat-scanner.git
+Important note: This is not a full antivirus.
+It uses very basic heuristic rules for educational and demonstration purposes only.
 
-# Go into the folder
-cd zerothreat-scanner
+🙋‍♂️ Contributing
+Contributions are welcome!
+Possible improvements:
 
-# Option A – Python 3
-python -m http.server 8000
+More file signatures / magic bytes
+Better pattern database
+File icon previews
+Export report (JSON / PDF)
+Dark / light mode toggle
+Support larger files via chunk reading
+Animated background effects
+Better mobile experience
 
-# Option B – Node.js (if you have npx)
-npx serve
+⚠️ Disclaimer
+ZeroThreat Scanner is not a replacement for professional antivirus software.
+It is an educational / proof-of-concept tool with very limited detection capabilities.
+Always use trusted, up-to-date security software for real protection.
 
-# Option C – Python 2 (older systems)
-python -m SimpleHTTPServer 8000
+Made with 💻 & 🔒 by kavindi
+textFeel free to change:
+
+ My GitHub kavindi52 / ZeroThreat Scanner
+
+
+Let me know if you want to add sections like:
+- Roadmap
+- Limitations & future ideas
+- How to add new detection rules
+- Deployment instructions (GitHub Pages, Netlify, Vercel, etc.)
+
+Happy coding! 🚀
